@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./public/hangman_icon.png">
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <div class="container">
+        <div id="back"></div>
+        <img src="./public/alura_logo.svg" class="logo" />
+        <section class="container-section" id="container-home">
+            <h1>Juego del Ahorcado</h1>
+            <div class="container-btns">
+                <button class="btn btn-auxiliar" id="btn-help">Instrucciones</button>
+                <button class="btn btn-primary" id="btn-on">Iniciar Juego</button>
+                <button class="btn btn-secondary" id="btn-add">Agregar Palabra</button>
+            </div>
+        </section>
+        <section class="section-help">
+            <div class="content-help">
+                <div class="help-header">
+                    <span id="close">X</span>
+                </div>
+                <div class="help-body">
+                    <h4>Iniciar Juego</h4>
+                    <p>
+                        En esta sección podrás jugar el famoso juego del ahorcado 
+                        presionando diferentes letras hasta encontrar la palabra escondida.
+                        Recuerda que solo tienes 5 intentos por partida, ¡buena suerte!
+                    </p>
+                    <br />
+                    <h4>Agregar Palabra</h4>
+                    <p>
+                        En esta sección podrás agregar tus propias palabras a la lista
+                        del juego y aumentar las posibilidades. Ten en cuenta que solo 
+                        deben ser palabras de un máximo de 8 caracteres.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="container-section section-off" id="container-game">
+            <div class="content-game">
+                <div class="card">
+                    <img src="./public/hangman_1.jpg" id="img-hangman" />
+                    <div class="card-rightWords"></div>
+                    <div class="card-wrongWords"></div>
+                </div>
+                <div class="card-btns">
+                    <button class="btn btn-primary" id="btn-reload">Nuevo Juego</button>
+                    <button class="btn btn-secondary" id="btn-exit">Salir</button>
+                <div>
+            </div>
+        </section>
+        <section class="container-section section-off" id="container-addword">
+            <div class="content-addword">
+                <div class="card">
+                    <label>Ingrese una palabra:</label>
+                    <div>
+                        <textarea id="text" onkeyup="validateWords(this)" maxlength="8"></textarea>
+                        <p>Solo se admiten palabras de un máximo de 8 letras❗</p>
+                    </div>
+                </div>
+                <div class="card-btns">
+                    <button class="btn btn-primary" id="btn-save">Guardar y empezar</button>
+                    <button class="btn btn-secondary" id="btn-cancel">Cancelar</button>
+                <div>
+            </div>
+        </section>
+        <footer class="container-footer">
+            <p class="credits">🌻​ Coded by <a href="https://github.com/anabelGerez">@anabelGerez​</a> 🌻​</p>
+        </footer>
+    </div>
+    <script src="scripts/hanged.js"></script>
+</body>
+</html>

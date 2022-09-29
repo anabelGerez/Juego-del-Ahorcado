@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+:root {
+    --text-light: #c0aaaa;
+    --text-medium: ;
+    --text-dark: #000000;
+    --text-aux: #3d3863;
+    --bar-color: #f1d9f0f5;
+    --card-color: #ffffffde;
+    --primary-color: #aeccb3;
+    --primary-hover-color: #ad4545;
+    --primary-shadow-color:#ad4545 ;
+    --secondary-color: #aeccb3;
+    --secondary-hover-color: #ad4545;
+    --secondary-shadow-color: #ad4545;
+    --auxiliar-color: #993232;
+    --auxiliar-hover-color: #ad4545;
+    --auxiliar-shadow-color: #b44040;
+    --border-color: #E2E8F0;
+    --border-focus-color: #D0D7E1;
+    --text-font: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --title-font: 'Jua', sans-serif;
+    --x-font: 'Baloo 2', cursive;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: consolas;
+    letter-spacing: 1px;
+}
+
+.container {
+    height: 100vh;
+  background-image: url(https://img.freepik.com/vector-gratis/vector-patrones-fisuras-fondo-linda-nube-esponjosa_53876-116803.jpg);
+    background-position: center;
+    background-size: cover;
+   
+
+}
+
+#back {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 28, 47, 0.6);
+}
+
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 25px;
+}
+
+.container-section {
+    height: calc(100% - 32px);
+}
+
+#container-home > h1 {
+    padding: 85px 0 65px;
+    text-align: center;
+font-family: consolas;
+    font-size: 85px;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+    
+}
+
+.container-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 20px 0;
+    width: 190px;
+  font-family: consolas;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 30px;
+}
+
+.btn-primary {
+    color: #000000;
+    background-color: var(--primary-color);
+    transition: all 200ms ease;
+}
+
+.btn-primary:hover {
+    cursor: pointer;
+    background-color: var(--primary-hover-color);
+    box-shadow: 4px 4px 5px var(--primary-shadow-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    transition: all 200ms ease;
+}
+
+.btn-secondary:hover {
+    cursor: pointer;
+    background-color: var(--secondary-hover-color);
+    box-shadow: 4px 4px 5px var(--secondary-shadow-color);
+}
+
+.btn-auxiliar {
+   background-color: #aeccb3;
+    transition: all 200ms ease;
+}
+
+.btn-auxiliar:hover {
+    cursor: pointer;
+    background-color: var(--auxiliar-hover-color);
+    box-shadow: 4px 4px 5px var(--auxiliar-shadow-color);
+}
+
+#btn-on {
+    margin: 30px 0;
+}
+
+.section-help {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content-help {
+    margin: 15% auto 0;
+    width: 25%;
+    background-color: var(--card-color);
+    border-radius: 10px;
+}
+
+.help-header {
+    padding: 10px 15px;
+    height: 38px;
+    width: 100%;
+    color:#000000 ;
+   background-color: #aeccb3;
+    border-radius: 9px 9px 0 0;
+}
+
+#close {
+    float: right;
+    font-family: var(--x-font);
+    font-size: 20px;
+    line-height: 18px;
+}
+
+#close:hover, #close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.help-body {
+    padding: 13px 15px 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.section-off {
+    display: none;
+    align-items: center;
+}
+
+.content-game {
+    margin: 0 20rem;
+    padding-top: 50px;
+}
+
+#img-hangman {
+    display: block;
+    margin: 0 auto;
+    height: 330px;
+}
+
+.card-rightWords {
+    display: flex;
+    margin-top: 25px;
+    height: 55.2px;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--text-dark);
+}
+
+.resp {
+    display: flex;
+    position: relative;
+    width: 60px;
+    justify-content: center;
+}
+
+.resp + .resp {
+    margin-left: 12px;
+}
+
+.resp::before {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    top: 55px;
+    content: "";
+    background-color: var(--primary-hover-color);
+    border-radius: 10px;
+}
+
+.card-wrongWords {
+    display: flex;
+    margin-top: 18px;
+    margin-bottom: 5px;
+    height: 35.2px;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--text-aux);
+}
+
+.int + .int {
+    margin-left: 10px;
+}
+
+.content-addword {
+    margin: 0 30rem;
+    padding-top: 85px;
+    
+}
+
+.card {
+    padding: 25px 35px;
+    background-color: var(--card-color);
+    border-radius: 30px;
+}
+
+.card > label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#text {
+    width: 100%;
+    height: 20rem;
+    padding: 10px 15px;
+    font-size: 30px;
+    border-color: var(--border-color);
+    resize: none;
+}
+
+#text:focus {
+    outline-color: var(--border-focus-color);
+}
+
+.card p {
+    text-align: right;
+    font-size: 11px;
+}
+
+.card-btns {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.card-btns > button {
+    width: 100%;
+}
+
+.container-footer {
+    display: flex;
+    height: 32px;
+    background-color: var(--bar-color);
+    justify-content: center;
+}
+
+.credits {
+    line-height: 32px;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.credits > a, .credits > a:-webkit-any-link {
+    color: var(--text-medium);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.credits > a:hover {
+    color: var(--text-light);
+}
+
+@media only screen and (max-width: 1023px) {
+    #container-home > h1 {
+        padding: 90px 0 50px;
+        font-size: 75px;
+    }
+
+    .content-help {
+        margin: 25% auto 0;
+        width: 45%;
+    }
+
+    .content-game {
+        margin: 0 4rem;
+        padding-top: 85px;
+    }
+
+    #img-hangman {
+        height: 295px;
+    }
+
+    .content-addword {
+        margin: 0 12rem;
+        padding-top: 85px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #container-home > h1 {
+        padding: 110px 0 50px;
+        font-size: 65px;
+    }
+
+    .content-help {
+        margin: 25% auto 0;
+        width: 65%;
+    }
+
+    .content-game {
+        margin: 0 2rem;
+        padding-top: 85px;
+    }
+
+    .content-addword {
+        margin: 0 2rem;
+        padding-top: 85px;
+    }
+
+    .card p {
+        font-size: 9px;
+    }
+}
